@@ -4,6 +4,7 @@ import java.util.Scanner;
 /**
  *
  * @author Juan Pedro.
+   @Adnan Hamidoun
  */
 public class Areas {
 
@@ -11,6 +12,7 @@ public class Areas {
         Scanner sc = new Scanner(System.in);
         System.out.println(areaCuadrado(sc));
         System.out.println(areaPentagono(sc));
+        System.out.println(areaTrapecio(sc));
     }
 
     public static double areaCuadrado(Scanner sc) {
@@ -25,5 +27,15 @@ public class Areas {
         System.out.print("Apotema: ");
         double a = Double.parseDouble(sc.nextLine());
         return (p * a) / 2;
+    }
+    public static double areaTrapecio(Scanner sc){
+        System.out.println("Base Mayor: ");
+        double a  = Double.parseDouble(sc.nextLine());
+        System.out.println("Base menor: ");
+        double b = Double.parseDouble(sc.nextLine());
+        System.out.println("Altura");
+        double c = Double.parseDouble(sc.nextLine());
+        return (a+b)/2 * c;
+
     }
 }
