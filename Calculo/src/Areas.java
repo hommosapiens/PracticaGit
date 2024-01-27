@@ -7,6 +7,7 @@ import java.util.Scanner;
  * @Mario García
  * @Santiago Pastor
  */
+
 public class Areas {
 
     public static void main(String[] args) {
@@ -27,7 +28,7 @@ public class Areas {
             }
 
         } while (!menu.equalsIgnoreCase("5"));
-        System.out.println("Un placer, disfrutra de tu dia :) ");
+        System.out.println("Un placer, disfrute de su día :)");
         System.out.println("ADIÓS!!!");
 
     }
