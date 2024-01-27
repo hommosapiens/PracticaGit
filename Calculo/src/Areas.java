@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 /**
@@ -17,14 +16,10 @@ public class Areas {
             menu = menu(sc);
 
             switch (menu) {
-                case "1" ->
-                    System.out.println("El área del cuadrado es: " + areaCuadrado(sc));
-                case "2" ->
-                    System.out.println("El área del pentágono es: " + areaPentagono(sc));
-                case "3" ->
-                    System.out.println("El área del trapecio es: " + areaTrapecio(sc));
-                case "4" ->
-                    System.out.println("El área del círculo es: " + areaCirculo(sc));
+                case "1" -> System.out.println("El área del cuadrado es: " + areaCuadrado(sc));
+                case "2" -> System.out.println("El área del pentágono es: " + areaPentagono(sc));
+                case "3" -> System.out.println("El área del trapecio es: " + areaTrapecio(sc));
+                case "4" -> System.out.println("El área del círculo es: " + areaCirculo(sc));
             }
 
         } while (!menu.equalsIgnoreCase("5"));
@@ -74,11 +69,11 @@ public class Areas {
     public static double areaPentagono(Scanner sc) {
         System.out.println();
         System.out.println("-----ÁREA PENTÁGONO-----");
-        
+
         System.out.print("Perímetro: ");
         double p = 0.0;
         boolean proceso1 = false;
-        
+
         do {
             try {
                 p = Double.parseDouble(sc.nextLine());
@@ -87,11 +82,11 @@ public class Areas {
                 System.out.print("Por favor introduzca un número: ");
             }
         } while (!proceso1);
-        
+
         System.out.print("Apotema: ");
         double a = 0.0;
         boolean proceso2 = false;
-        
+
         do {
             try {
                 a = Double.parseDouble(sc.nextLine());
@@ -100,19 +95,46 @@ public class Areas {
                 System.out.print("Por favor introduzca un número: ");
             }
         } while (!proceso2);
-        
+
         return (p * a) / 2;
     }
 
     public static double areaTrapecio(Scanner sc) {
+        boolean proceso2=false;
+        double a=0,b=0,c=0;
         System.out.println();
         System.out.println("-----ÁREA TRAPECIO-----");
         System.out.print("Base Mayor: ");
-        double a = Double.parseDouble(sc.nextLine());
+        do {
+            try {
+                a = Double.parseDouble(sc.nextLine());
+                proceso2 = true;
+            } catch (Exception e) {
+                System.out.print("Por favor introduzca un número: ");
+            }
+        } while (!proceso2);
+        proceso2=false;
         System.out.print("Base menor: ");
-        double b = Double.parseDouble(sc.nextLine());
+        do {
+            try {
+                b = Double.parseDouble(sc.nextLine());
+                proceso2 = true;
+            } catch (Exception e) {
+                System.out.print("Por favor introduzca un número válido: ");
+            }
+        } while (!proceso2);
+        proceso2=false;
+
         System.out.print("Altura: ");
-        double c = Double.parseDouble(sc.nextLine());
+        do {
+            try {
+                c = Double.parseDouble(sc.nextLine());
+                proceso2 = true;
+            } catch (Exception e) {
+                System.out.print("Por favor introduzca un número válido: ");
+            }
+        } while (!proceso2);
+
         return (a + b) / 2 * c;
     }
 
