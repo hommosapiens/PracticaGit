@@ -35,7 +35,7 @@ public class Areas {
         System.out.println("1. Calcular área de cuadrado");
         System.out.println("2. Calcular área de pentágono");
         System.out.println("3. Calcular área de trapecio");
-        System.out.println("4. Calcular área de cuadrado");
+        System.out.println("4. Calcular área de círculo");
         System.out.println("5. Salir");
         System.out.print("Introduce una opción: ");
 
@@ -142,7 +142,16 @@ public class Areas {
         System.out.println();
         System.out.println("-----ÁREA CÍRCULO-----");
         System.out.print("Radio: ");
-        double radio = Double.parseDouble(sc.nextLine());
+        Double radio = 0.0;
+         boolean success = false;
+        do {
+            try {
+                radio = Double.parseDouble(sc.nextLine());
+                success = true;
+            } catch (Exception e) {
+                System.out.print("Por favor introduzca un valor válido: ");
+            }
+        } while (!success);
         return Math.PI * Math.pow(radio, 2);
     }
 
