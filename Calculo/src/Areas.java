@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 /**
@@ -6,7 +7,6 @@ import java.util.Scanner;
  * @Mario García
  * @Santiago Pastor
  */
-
 public class Areas {
 
     public static void main(String[] args) {
@@ -16,10 +16,14 @@ public class Areas {
             menu = menu(sc);
 
             switch (menu) {
-                case "1" -> System.out.println("El área del cuadrado es: " + areaCuadrado(sc));
-                case "2" -> System.out.println("El área del pentágono es: " + areaPentagono(sc));
-                case "3" -> System.out.println("El área del trapecio es: " + areaTrapecio(sc));
-                case "4" -> System.out.println("El área del círculo es: " + areaCirculo(sc));
+                case "1" ->
+                    System.out.println("El área del cuadrado es: " + areaCuadrado(sc) + " cm.");
+                case "2" ->
+                    System.out.println("El área del pentágono es: " + areaPentagono(sc) + " cm.");
+                case "3" ->
+                    System.out.println("El área del trapecio es: " + areaTrapecio(sc) + " cm.");
+                case "4" ->
+                    System.out.println("El área del círculo es: " + areaCirculo(sc) + " cm.");
             }
 
         } while (!menu.equalsIgnoreCase("5"));
@@ -52,7 +56,7 @@ public class Areas {
     public static double areaCuadrado(Scanner sc) {
         System.out.println();
         System.out.println("-----ÁREA CUADRADO-----");
-        System.out.print("Introduzca la longitud del lado: ");
+        System.out.print("Introduzca la longitud del lado en cm: ");
         Double a = 0.0;
         boolean success = false;
         do {
@@ -70,7 +74,7 @@ public class Areas {
         System.out.println();
         System.out.println("-----ÁREA PENTÁGONO-----");
 
-        System.out.print("Perímetro: ");
+        System.out.print("Perímetro en cm: ");
         double p = 0.0;
         boolean proceso1 = false;
 
@@ -83,7 +87,7 @@ public class Areas {
             }
         } while (!proceso1);
 
-        System.out.print("Apotema: ");
+        System.out.print("Apotema en cm: ");
         double a = 0.0;
         boolean proceso2 = false;
 
@@ -100,11 +104,11 @@ public class Areas {
     }
 
     public static double areaTrapecio(Scanner sc) {
-        boolean proceso2=false;
-        double a=0,b=0,c=0;
+        boolean proceso2 = false;
+        double a = 0, b = 0, c = 0;
         System.out.println();
         System.out.println("-----ÁREA TRAPECIO-----");
-        System.out.print("Base Mayor: ");
+        System.out.print("Base Mayor en cm: ");
         do {
             try {
                 a = Double.parseDouble(sc.nextLine());
@@ -113,8 +117,8 @@ public class Areas {
                 System.out.print("Por favor introduzca un número: ");
             }
         } while (!proceso2);
-        proceso2=false;
-        System.out.print("Base menor: ");
+        proceso2 = false;
+        System.out.print("Base menor en cm: ");
         do {
             try {
                 b = Double.parseDouble(sc.nextLine());
@@ -123,9 +127,9 @@ public class Areas {
                 System.out.print("Por favor introduzca un número válido: ");
             }
         } while (!proceso2);
-        proceso2=false;
+        proceso2 = false;
 
-        System.out.print("Altura: ");
+        System.out.print("Altura en cm: ");
         do {
             try {
                 c = Double.parseDouble(sc.nextLine());
@@ -141,9 +145,9 @@ public class Areas {
     public static double areaCirculo(Scanner sc) {
         System.out.println();
         System.out.println("-----ÁREA CÍRCULO-----");
-        System.out.print("Radio: ");
+        System.out.print("Radio en cm: ");
         Double radio = 0.0;
-         boolean success = false;
+        boolean success = false;
         do {
             try {
                 radio = Double.parseDouble(sc.nextLine());
